@@ -25,10 +25,19 @@ let outPara = document.getElementsByClassName(`out`);
         outPara[i].style.color = "blue";
     }
 
-    let container = document.getElementById("container");
-    let change = document.getElementById("change");
+//Using the element ID to select both the id's for change and container and using outer.html to change the div to a para
+let container = document.getElementById("container");
+let change = document.getElementById("change");
 
-    change.outerHTML = (`<p>"Getting rid of the div"</p>`);
+change.outerHTML = (`<p>"Getting rid of the div"</p>`);
+
+
+//
+let parent = container.parentNode;
+var newDiv =document.createElement("div")
+parent.insertBefore(newDiv, container)
+
+newDiv.innerHTML = ("content for the div")
 
 
 
